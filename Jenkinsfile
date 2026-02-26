@@ -32,13 +32,10 @@ pipeline {
         }
 
         stage('Run NGINX Container') {
-            steps {
-                sh '''
-                docker run -d -p 9090:80 \
-                -v ${WORKSPACE}/nginx/default.conf:/etc/nginx/conf.d/default.conf \
-                nginx
-                '''
-            }
+    steps {
+        sh 'docker run -d -p 9090:80 nginx'
+    }
+
         }
     }
 }
