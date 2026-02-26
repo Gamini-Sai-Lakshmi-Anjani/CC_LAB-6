@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Gamini-Sai-Lakshmi-Anjani/CC_LAB-6.git'
-            }
-        }
-
         stage('Build Backend Image') {
             steps {
                 script {
